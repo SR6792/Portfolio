@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    top:0%;
+    left:0%;
+}
+body{
+    background-color: #0D5EA6;
+    font-family: 'Rubik', sans-serif;
+}
+nav{
+    position: sticky;
+    /*always there*/
+    z-index: 1000;
+    padding: 10px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #000;
+
+
+    /* backdrop-filter: blur(10px);   */
+    /* color:#0000;       blur = glass effect */
+    margin:0 auto;
+    width:fit-content;
+    /*border-bottom: rgba(255,255,255,0.5); /* transparent white */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 30px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding:10px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    background-color:black;
+    color : white;
+    border-radius: 30px;
+}
+section{
+    margin:20px 40px;
+    background-color: #f98e03;
+    border-radius: 20px;
+    padding: 20px;
+}
+.home{
+    padding: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.my-photo img{
+    margin: 20px;
+    height:30%;
+    width:30%;
+    border-radius: 200px;
+}
+.my-photo{
+    display: flex;
+    margin-top: 20px;;
+    justify-content: center;
+}
+.intro{
+    background-color:#FFF3E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+.intro p{
+    text-align: center;
+}
+.about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.about p{
+    text-align: center;
+    background-color: #FFF3E0;
+    padding: 20px;
+}
+
+.skills-grid{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.skill-card{
+    display: flex;
+    flex-direction: column;
+}
+.skill{
+    opacity: 0;
+    transition: transform 0.3s ease-in;
+    padding: 10px;
+}
+.skill:hover{
+    opacity: 1;
+    background-color: #FFF3E0;
+    width: fit-content;
+}
+.projectss{
+    position: relative;
+}
+.project-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}  
+.project-card p{
+    max-width: 500px;
+    background-color: #FFF3E0;
+    width: fit-content;
+    padding: 10px;
+}
+.project-card a{
+    max-width: fit-content;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding:5px;
+}
+.project-card a:hover{
+    background-color: black;
+    color: white;
+}
+.link-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.project{
+    position: absolute;
+    left:50%;
+    transform: scale(0);/*Makes it disappear unless u hover*/
+    transition:transform 0.3s ease-in-out ;
+    transform-origin: top-left;/*SHows the project left*/
+    margin-top:20px;
+    z-index: 1;
+}
+.link-wrap:hover .project{
+    transform: scale(1);
+}
+.footer{
+    margin:20px 40px;
+}
+.contact a:hover{
+    background-color: #000;
+    color: white;
+}
+/*Do responsiveness at the end*/
+
+@media (max-width:768px) {
+    nav{
+        font-size: 10px;
+        position: sticky;
+        /*always there*/
+        z-index: 1000;
+        margin:0 auto;
+        width:fit-content;
+        display: flex;
+        flex-wrap: wrap;/*When content go out of pg*/
+        justify-content: center;
+        gap:1px;
+        border-radius: 30px;
+    }
+    .project-card{
+        position: relative;
+    }
+    .project-card p{
+        max-width: 500px;
+        background-color: #FFF3E0;
+        width: fit-content;
+        padding: 10px;
+    }
+    .project{
+    position: absolute;
+    left:50%;
+    transform: scale(0);/*Makes it disappear unless u hover*/
+    transition:transform 0.3s ease-in-out ;
+    transform-origin: top-left;/*SHows the project left*/
+    margin-top:20px;
+    z-index: 1;
+    }
+    .skills-grid{
+        display: flex;
+        gap:10px;
+        max-width: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-card{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+    .skill{
+        padding: 0px;
+    }
+    .skill-card h3{
+        max-width: 40px;
+        margin-right: 30px;
+    }
+}
