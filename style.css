@@ -55,6 +55,7 @@ section{
     border-radius: 20px;
 }
 .my-photo img{
+    max-width: 100%;
     margin: 20px;
     height:30%;
     width:30%;
@@ -193,23 +194,33 @@ section{
     z-index: 1;
     }
     .skills-grid{
+        font-size: 10px;
         display: flex;
         gap:10px;
         max-width: 20px;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-evenly;
     }
     .skill-card{
+        align-items: center;
         font-size: 10px;
         display: flex;
-        flex-direction: column;
-        gap:10px;
+        gap:20px;
     }
     .skill{
         padding: 0px;
     }
     .skill-card h3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
         max-width: 40px;
         margin-right: 30px;
+    }
+    section{
+    margin:10px 10px;
+    background-color: #f98e03;
+    border-radius: 20px;
+    padding: 10px;
     }
 }
