@@ -7,7 +7,7 @@ A responsive and modern personal portfolio website built with HTML, CSS.This sit
 ## 🚀 Live Demo
 
 [https://sr6792.github.io/Portfolio/](https://github.com/SR6792/Portfolio)  
-*(Replace with your actual GitHub Pages/Netlify/Vercel link)*
+
 
 ---
 
