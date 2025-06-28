@@ -30,3 +30,4 @@ A responsive and modern personal portfolio website built with HTML, CSS.This sit
 
 ---
 
+Also made dark mode as a way to pracitse js

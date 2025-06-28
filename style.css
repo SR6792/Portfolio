@@ -9,14 +9,12 @@ body{
 }
 nav{
     position: sticky;
-    /*always there*/
+    /* always there */ 
     z-index: 1000;
     padding: 10px 10px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     color: #000;
-
-
     /* backdrop-filter: blur(10px);   */
     /* color:#0000;       blur = glass effect */
     margin:0 auto;
@@ -39,6 +37,61 @@ nav a:hover{
     color : white;
     border-radius: 30px;
 }
+.togglebtn{
+    background-color: transparent;
+    border-radius: 30px;
+    border: none;
+    cursor:pointer;
+}
+.togglebtn:hover{
+    background-color: black;
+    transform: rotate(15deg);
+    transition: transform 0.3s ease-in-out;
+}
+/*dark mode changes*/
+body.dark-mode{/*Changes to website as a whole on dark mode*/
+    background-color: black;
+    color:white;
+}
+body.dark-mode section{
+    background-color: #ff7043;
+}
+body.dark-mode nav{
+    background-color: rgtaba(0, 0, 0, 0.51);
+    color:white;
+}
+body.dark-mode nav a{
+    background-color:transparent;
+}
+body.dark-mode nav a:hover{
+    background-color: white;
+    color: black;
+}
+body.dark-mode .intro{
+    background-color: #2a2a2a;
+}
+body.dark-mode .intro p{
+    background-color: transparent;
+}
+body.dark-mode p{
+    color:#ffffff;
+    background-color: #000;
+}
+body.dark-mode .contact p,body.dark-mode .skills p{
+    background-color:#ff7043
+}
+body.dark-mode .skill:hover{
+    background-color: transparent;
+}
+body.dark-mode .skill p{
+    background-color: transparent;
+    color: white;
+}
+body,h3,h1,p,a{
+    transition:transform 0.3s ease-in-out
+}
+/*this is for transnition when dark mode*/
+/*dark mode ends light mode changes*/
 section{
     margin:20px 40px;
     background-color: #f98e03;
@@ -118,11 +171,15 @@ section{
     flex-direction: column;
     align-items: flex-start;
 }  
+.project-card h3{
+    font-size: 15px;
+}
 .project-card p{
     max-width: 500px;
     background-color: #FFF3E0;
     width: fit-content;
     padding: 10px;
+    font-size: 12px;
 }
 .project-card a{
     max-width: fit-content;
@@ -159,6 +216,8 @@ section{
     background-color: #000;
     color: white;
 }
+
+
 /*Do responsiveness at the end*/
 
 @media (max-width:768px) {
@@ -194,10 +253,9 @@ section{
     z-index: 1;
     }
     .skills-grid{
-        font-size: 10px;
+        font-size: 20px;
         display: flex;
         gap:10px;
-        max-width: 20px;
         justify-content: space-evenly;
     }
     .skill-card{
